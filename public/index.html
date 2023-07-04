@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100;0,200;0,300;0,700;1,500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Login Hotel</title>
+</head>
+<body>
+    <div class="container">
+        <img id="img-cont" src="img/hotel-my.jpg" alt="#">
+        <div id="form-container">
+            <!-- http://127.0.0.1:5500/public/recepcion.html -->
+            <!-- <img src="img/cine.png" alt="#"> -->
+            <div class="form-box login">
+                <h2>Iniciar Sesion</h2>
+                <form action="" id="login-form" class="site-form">
+                    <div class="box-input">
+                        <img width="20px" src="img/white-user.png" alt="#">
+                        <input type="text" name="username" id="username" required>
+                        <label class="form-register-label" for="username">Nombre de Usuario</label>
+                    </div>
+
+                    <div class="box-input">
+                        <img width="20px" src="img/white-pass (1).png" alt="#">
+                        <input type="password" name="password" id="password-login" required>
+                        <label class="form-register-label" for="password">Contraseña</label>
+                        
+                    </div>
+
+                    <div id="checkbox">
+                        <p><a href="#">Perdiste tu contraseña</a></p>
+                    
+            
+                    <input id="btn-login" class="btn" type="submit" value="Iniciar Sesion">
+                    <p>No tienes una cuenta? <a class="register-link" href="#">Registrate</a></p>
+                    </div>
+                </form>
+            </div>
+
+            <div class="form-box register">
+                <h2>Registrate</h2>
+                <form class="site-form">
+                    <div class="box-input">
+                        <img width="20px" src="img/white-user.png" alt="#">
+                        <input type="text" name="name" id="name" required>
+                        <label class="form-register-label" for="name">Nombre de Usuario</label>
+                        
+                    </div>
+
+                    <div class="box-input">
+                        <img width="20px" src="img/white-rell-sms.png" alt="#">
+                        <input type="email" name="email" id="email-register" required>
+                        <label class="form-register-label" for="email">E-mail:</label>
+                        
+                    </div>
+
+                    <div class="box-input">
+                        <img width="20px" src="img/white-pass (1).png" alt="#">
+                        <input class="form-register-input" type="password" name="password" id="password-register" required>
+                        <label class="form-register-label" for="password">Contraseña</label>
+                        
+                    </div>
+
+                    <div id="checkbox">
+                        <input type="checkbox">Acepto las politicas de privacidad
+                    
+            
+                    <input id="btn-register" class="btn" type="submit" value="Registrarse">
+                    <p>Ya tengo una cuenta? <a class="login-link" href="#">Iniciar Sesion</a></p>
+                    </div>
+                </form>
+            </div>
+        </div>
+        
+        
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

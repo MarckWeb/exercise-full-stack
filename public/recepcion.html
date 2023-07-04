@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100;0,200;0,300;0,700;1,500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Hotel Palace</title>
+</head>
+
+<body>
+    <div class="header">
+        <img src="img/hotel-logo.png" alt="hotel palace">
+    </div>
+    <div id="container">
+       
+        <div class="site-forms-client item">
+            <div class="site-form-register items-form">
+                <div class="title">
+                    <h2>registro de clientes</h2>
+                </div>
+                <form action="http://localhost:3000/api/clientes" method="post" id="form-register">
+                    <div class="input-box">
+                        <label for="nombre">Nombre:</label>
+                        <input type="text" name="nombre" id="nombre">
+                    </div>
+                    <div class="input-box">
+                        <label for="apellido">Apellido:</label>
+                        <input type="text" name="apellido" id="apellido">
+                    </div>
+                    <div class="input-box">
+                        <label for="dni">DNI:</label>
+                        <input type="text" name="dni" id="dni">
+                    </div>
+                    <div class="input-box">
+                        <input class="btn" type="submit" value="Registrar">
+                        <button class="btn" id="btn-update-data">Actualizar Datos</button>
+                    </div>
+                </form>
+            </div>
+
+            <div class="site-form-update items-form">
+                <div class="title">
+                    <h2>Actualizar Datos</h2>
+                </div>
+                <form action="http://localhost:3000/api/clientes" method="put" id="form-update">
+                    <div class="input-box">
+                        <label for="old-dni">Dni actual</label>
+                        <input type="tex" name="old-dni" id="old-dni">
+                    </div>
+                    <div class="input-box">
+                        <label for="new-dni">Dni nuevo</label>
+                        <input type="tex" name="new-dni" id="new-dni">
+                    </div>
+                    <div class="input-box">
+                        <label for="new-nombre">Nombre nuevo</label>
+                        <input type="tex" name="new-nombre" id="new-nombre">
+                    </div>
+                    <div class="input-box">
+                        <label for="new-apellido">Apellido nuevo</label>
+                        <input type="tex" name="new-apellido" id="new-apellido">
+                    </div>
+                    <div class="input-box">
+                        <input class="btn" type="submit" value="Actualizar">
+                        <button class="btn" id="btn-register-data">Registrar Cliente</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        
+
+        <div class="site-table-register item site-table">
+            <h2>registro de clientes</h2>
+            <table id="table-register" class="items-table">
+                <tr>
+                    <th>DNI</th>
+                    <th>Nombre</th>
+                    <th>Apellido</th>
+                </tr>
+            </table>
+        </div>
+
+        <div class="site-form-and-table-room item  site-room" >
+        <section id="data-Admin">
+            <figure>
+                <img src="img/hombre.png" alt="Admin">
+            </figure>
+            <article id="site-recep">
+                <h3>DATOS RECEPCION</h3>
+                
+            </article>
+        </section>
+
+            <div class="items-form ">
+                <div class="title">
+                    <h2>Liberar Habitaciones</h2>
+                </div>
+                <form action="http://localhost:3000/api/reservas/borrar" method="DELETE" id="form-free">
+                    <div class="input-box">
+                        <label for="dni-free">Dni Cliente</label>
+                        <input type="tex" name="dni-free" id="dni-free">
+                    </div>
+                    <div class="input-box">
+                        <label for="room-free">Nª habitacion a liberar</label>
+                        <input type="tex" name="room-free" id="room-free">
+                    </div>
+                    <div class="input-box"><input class="btn" type="submit" value="Liberar"></div>
+                </form>
+            </div>
+            <div class="site-table">
+                <h2>Estado de las Habitaciones</h2>
+                <table id="table-habitacion" class="items-table habitacion-style">
+                    <tr>
+                        <th>Nº Habitacion</th>
+                        <th>Estado</th>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    
+
+        <div class="site-form-reservation item">
+            <div class="items-form">
+                <div class="title">
+                    <h2>Reserva de habitaciones</h2>
+                </div>
+                <form id="form-reservation" action="" method="post">
+                    <div class="input-box">
+                        <label for="dni-check"> Dni Cliente</label>
+                        <input type="text" name="dni-check" id="dni-check">
+                    </div>
+                    <div class="input-box">
+                        <label for="habitacion">Nº de Habitacion</label>
+                        <input type="text" name="habitacion" id="habitacion">
+                    </div>
+                    <div class="input-box">
+                        <label for="fecha-in">Ingreso</label>
+                        <input type="date" name="fecha-in" id="fecha-in">
+                    </div>
+                    <div class="input-box">
+                        <label for="fecha-out">Salida</label>
+                        <input type="date" name="fecha-out" id="fecha-out">
+                    </div>
+                    <div class="input-box"><input class="btn" type="submit" value="Reservar"></div>
+                </form>
+            </div>
+        </div>
+
+        <div class="site-table-reservation item site-table">
+            <h2>Lista de Reservas</h2>
+            <table id="table-reservas" class="items-table">
+                <tr>
+                    <th>Dni</th>
+                    <th>Nº Habitacion</th>
+                    <th>Fecha Ingreso</th>
+                    <th>Fecha Salida</th>
+                </tr>
+            </table>
+        </div>
+    </div>
+  
+    <script src="script.js"></script>
+</body>
+
+</html>

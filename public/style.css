@@ -1,0 +1,384 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* toe el formulario index
+ */
+
+ .container{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+}
+
+.container #img-cont{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+#form-container{
+    margin: auto;
+    position: relative;
+    width: 90%;
+    max-width: 500px;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(5px);
+    overflow: hidden;
+    
+}
+
+#form-container .form-box{
+    width: 400px;
+    max-width: 800px;
+    padding: 20px;
+    color: white;
+    
+}
+
+#form-container .login{
+     transition: transform 1s ease;
+     transform: translateX(0);
+}
+
+
+#form-container .register{
+    position: absolute;
+    transition: 1s;
+    transform: translateX(500px);
+}
+
+#form-container.open .form-box.login{
+    transform: translateX(-500px);
+}
+
+#form-container.open .form-box.register{
+    transition: transform 1s ease;
+     transform: translateX(0);
+}  
+
+#form-container .form-box h2{
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.site-form{
+    /* border: 1px solid rgba(255, 255, 255, 0.423); */
+    width: 100%;
+    margin: auto;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.678);
+    text-align: center;
+}
+
+.box-input{
+    position: relative;
+    border-bottom: 2px solid rgb(255, 250, 250);
+    width: 100%;
+    height: 50px;
+    margin: 30px 0;
+    
+}
+
+.box-input label{
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50%);
+    font-size: 1em;
+    pointer-events: none;
+    transition: .5s;
+}
+
+.box-input input{
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    padding-right:50px ;
+    color: rgb(240, 108, 20);
+}
+/* trabajar con coincidencias y no con el valor exacto */
+.box-input input:focus~label,
+.box-input input:valid~label
+{
+    top: -5px;
+}
+
+.box-input img{
+   position: absolute;
+   top: 50%;
+   transform: translateY(-50%);
+   right: 8px;
+
+}
+
+#checkbox a{
+    text-decoration: none;
+    color: orangered;
+    font-weight: 700;
+}
+
+#checkbox .btn{
+    background-color: rgba(0, 0, 0, 0.645);
+    color: white;
+    padding: 10px 20px;
+    margin: 10px 0;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    transition: 1s;
+}
+
+#checkbox .btn:hover{
+    background-color: rgba(255, 68, 0, 0.507);
+}
+
+
+
+
+/* todo el registro */
+body{
+    font-family: 'Roboto Mono', monospace;
+    font-size: 15px;
+    font-weight: normal;
+    background-color: white;
+}
+.header{
+    width: 100%;
+    background-color: rgb(66, 101, 123);
+}
+
+.header img{
+    width: 300px;
+    height: 70px;
+    margin-left: 100px;
+}
+
+/* #container{
+    padding: 20px auto;
+    border: 2px solid red;
+} */
+
+.item{
+    border: 3px solid white;
+    padding: 10px;
+    background-color: rgba(154, 154, 154, 0.682);
+}
+
+.site-forms-client{
+    display: flex;  
+}
+
+
+/* tablas */
+.items-table{
+    padding: 50px;
+}
+
+.items-table th, td{
+    width: 100px;
+    padding: 3px;
+    text-align: center;
+}
+
+.items-table th{
+    background-color: rgba(245, 110, 6, 0.942);
+    color: rgb(247, 247, 252);
+}
+
+.items-table td{
+    background-color: rgb(12, 12, 12);
+    color: white;
+}
+
+.site-table h2{
+    text-transform: uppercase;
+    font-size: 14px;
+    text-align: center;
+}
+
+.site-table{
+    margin: 0px auto;
+}
+
+.habitacion-style{
+    margin: auto;
+}
+
+/* formularios */
+/* form{
+    border: 2px solid white;
+    text-align: center;
+} */
+
+.items-form{
+    background-color: rgba(0,0,0,0.69);
+    /* border: 2px solid grey; */
+    /* background-color: rgba(0, 0, 0, 0.634); */
+    border-radius: 5px;
+    padding: 5px;
+    margin: auto;
+    color: white;
+    overflow: hidden;
+    
+}
+
+.items-form:hover{
+    box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.69);
+}
+
+.items-form h2{
+    text-transform: uppercase;
+    font-size: 14px;
+    text-align: center;
+    transform:skew(-50deg);
+}
+
+.items-form .title{
+    background-color: rgba(245, 110, 6, 0.942);
+    transform: translateX(-50px) skew(50deg);
+}
+
+.items-form .input-box{
+    /* border: 1px solid red; */
+    padding: 5px;
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+/* .items-form .input-box input{
+    font-size: 16px;
+} */
+
+
+.site-forms-client{
+    /* border: 2px solid green; */
+    position: relative;
+    padding: 150px;
+    overflow: hidden;
+    
+}
+
+.site-form-update{
+    width: 90%;
+    position: absolute;
+    transform: translateX(500px);
+    transition:  0.8s ease;
+
+}
+.site-form-register{
+    width: 90%;
+    position: absolute;
+    top: 25px;
+    left: 10px;
+    transition:  0.8s ease;
+}
+
+.site-forms-client.open .site-form-update{
+    position: absolute;
+    top: 25px;
+    left: 10px;
+    transform: translateX(0px);
+    
+}
+
+.site-forms-client.open .site-form-register{
+    position: absolute;
+    transform: translateX(-500px);
+    
+}
+
+
+/* datos admin */
+#data-Admin{
+    /* border: 1px solid red; */
+    padding: 10px;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#data-Admin figure img{
+    border: 1px solid white;
+    width: 150px;
+    height: 100px;
+    border-radius: 50%;
+    padding: 20px;
+}
+
+#data-Admin h3{
+    color: white;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.btn{
+    border: none;
+    background-color: black;
+    border-radius: 2px;
+    
+     
+    color:rgb(242, 181, 39);
+    font-size: 14px;
+    padding: 5px;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+
+.btn:hover{
+    box-shadow: 1px 1px 5px white;
+}
+
+@media(min-width: 500px){
+    #container{
+        display: grid;
+        grid-gap: 5px;
+        grid-template-columns: 1fr 1fr;
+    }
+    
+    .site-room{
+        grid-column: 2/3;
+        grid-row: 1/5;
+    }
+
+    .site-forms-client{
+        height: 205px;
+    }
+    
+}
+
+@media(min-width: 900px){
+    #container{
+        margin: 20px 100px;
+        
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    .site-room{
+        grid-column: 3/4;
+        grid-row: 1/3;
+    }
+
+    .item{
+        border: none;
+    }
+
+    .site-form-and-table-room{
+        border-left: 5px solid white;
+        border-right: 5px solid white;
+    }
+}
+
